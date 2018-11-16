@@ -9,7 +9,12 @@ maxlag=30;
 [tx,lag]=xcorr(x,'unbiased',maxlag);
 lag=-maxlag:maxlag
 plot(lag,tx)
-
+b=randn(size(x)) ;
+b=(b-mean(b))/std(b) ;
+b=b*sqrt(7);
+xb = x + b ;
+[txb,lag]=xcorr(xb,'unbiased',maxlag);
+plot(lag,txb,lag,tx) ;
 
 
 
