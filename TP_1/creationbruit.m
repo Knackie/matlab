@@ -13,7 +13,7 @@ for n=1:length(s)
     E=E+s(n)^2;
 end
 %2 : E=sum(x.^2)
-%3 : x.*x'
+%3 : x*x'
 %4 : norm(x)^2
 
 m=0;
